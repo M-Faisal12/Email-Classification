@@ -31,7 +31,7 @@ def tag_email(text):
     "congratulations", "selected", "claim now",
     "congrats", "offer expires", "act now",
     "exclusive deal", "guaranteed", "risk free",
-    "earn money", "make money fast"
+    "earn money", "make money fast", "$","get rich", "investment opportunity"
 ]
 
     # ---- BUSINESS KEYWORDS ----
