@@ -4,17 +4,20 @@ from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.tree import DecisionTreeClassifier
 from Preprocessing import preprocess
-
+import os
 
 # LOAD DATA
-df = pd.read_csv("data/labeled_emails.csv")
+print("A")
+df = pd.read_csv(os.path.join(os.path.dirname(__file__), "Data", "labeled_emails.csv"))
 
 # PREPROCESS TEXT
-df["clean_text"] = df["email_body"].apply(preprocess)
+print("V")
+df["clean_text"] = df["Message"].apply(preprocess)
 
+print("K")
 X = df["clean_text"]
 y = df["label"]
-
+print("J")
 # PIPELINE 
 model = Pipeline([
     ("tfidf", TfidfVectorizer()),
@@ -25,7 +28,13 @@ model = Pipeline([
 model.fit(X, y)
 
 # SAVE MODEL
-with open("model.pkl", "wb") as f:
+file_path = os.path.join(
+    os.path.dirname(__file__),
+    "Data",
+    "model.pkl"
+)
+
+with open(file_path, "wb") as f:
     pickle.dump(model, f)
 
 print("Model trained and saved as model.pkl")

@@ -1,10 +1,10 @@
 import spacy
 
 nlp = spacy.load("en_core_web_sm")
-
 def preprocess(text):
     doc = nlp(str(text).lower())
 
+    print("Preprocessing text:")
     tokens = [
         token.lemma_
         for token in doc
