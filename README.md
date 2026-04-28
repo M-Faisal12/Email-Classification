@@ -52,7 +52,7 @@ Email-Classification/
 │
 ├── config.py
 ├── README.md
-
+```
 
 ---
 
