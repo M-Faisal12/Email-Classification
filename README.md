@@ -31,21 +31,24 @@ using a supervised machine learning approach.
 ---
 
 ## 🏗️ Project Structure
+
+```text
 Email-Classification/
 │
 ├── Code/
-│ ├── Preprocessing.py
-│ ├── Train/
-│ │ ├── Label_Email.py
-│ │ ├── Model.py
-│ ├── Test/
-|   |──Test_Model.py
+│   ├── Preprocessing.py
+│   ├── Train/
+│   │   ├── Label_Email.py
+│   │   ├── Model.py
+│   │
+│   ├── Test/
+│   │   └── Test_Model.py
 │
 ├── Data/
-│ ├── Dataset.csv
-│ ├── labeled_emails.csv
-│ ├── Test.csv
-│ ├── modal.pkl
+│   ├── Dataset.csv
+│   ├── labeled_emails.csv
+│   ├── Test.csv
+│   └── model.pkl
 │
 ├── config.py
 ├── README.md
