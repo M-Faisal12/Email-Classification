@@ -139,8 +139,7 @@ git clone https://github.com/your-username/email-classification.git
 cd email-classification
 
 2. Install Dependencies
-pip install -r requirements.txt
-
+ Pandas,Scikit-learn ,spacy
 3. Generate Labels
 python Code/Train/Label_Email.py
 4. Train Model
